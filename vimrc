@@ -14,7 +14,17 @@ set shiftwidth=4
 
 colorscheme molokai
 
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
+
 let g:tex_flavor = 'latex'
+let g:vimtex_compiler_latexmk = {
+			\ 'continuous' : 0,
+			\}
+
 if has('nvim')
  let g:vimtex_compiler_progname = 'nvr'
 endif
