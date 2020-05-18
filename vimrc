@@ -17,8 +17,13 @@ colorscheme molokai
 augroup pencil
   autocmd!
   autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType tex			call pencil#init()
   autocmd FileType text         call pencil#init()
 augroup END
+
+autocmd FileType python nnoremap <buffer> <localleader>c I# <esc>
+autocmd FileType c nnoremap <buffer> <localleader>c I// <esc>
+autocmd FileType tex nnoremap <buffer> <localleader>c I% <esc>
 
 let g:tex_flavor = 'latex'
 let g:vimtex_compiler_latexmk = {
