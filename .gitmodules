@@ -1,0 +1,6 @@
+[submodule "bundle/YouCompleteMe/third_party/requests-futures"]
+	path = bundle/YouCompleteMe/third_party/requests-futures
+	url = https://github.com/ross/requests-futures.git
+[submodule "bundle/YouCompleteMe/third_party/ycmd"]
+	path = bundle/YouCompleteMe/third_party/ycmd
+	url = https://github.com/ycm-core/ycmd.git
