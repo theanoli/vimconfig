@@ -25,6 +25,7 @@ augroup END
 autocmd FileType python nnoremap <buffer> <localleader>c I# <esc>
 autocmd FileType c nnoremap <buffer> <localleader>c I// <esc>
 autocmd FileType tex nnoremap <buffer> <localleader>c I% <esc>
+autocmd BufRead,BufNewFile * set conceallevel=0
 
 let g:tex_flavor = 'latex'
 let g:vimtex_compiler_latexmk = {
@@ -41,11 +42,6 @@ if !exists('g:ycm_semantic_triggers')
 endif
 au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
 
-" To prevent conceal in LaTeX files
-" let g:tex_conceal = ''
-
-" To prevent conceal in any file
-set conceallevel = 0
 
 let g:go_disable_autoinstall = 0
 let g:go_highlight_types = 1
