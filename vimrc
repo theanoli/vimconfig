@@ -13,7 +13,7 @@ set tabstop=4
 set shiftwidth=4
 set spell
 
-colorscheme molokai
+colorscheme desert
 
 augroup pencil
   autocmd!
@@ -36,12 +36,9 @@ if has('nvim')
  let g:vimtex_compiler_progname = 'nvr'
 endif
 
-let g:ycm_auto_trigger = 0
-if !exists('g:ycm_semantic_triggers')
-	let g:ycm_semantic_triggers = {}
-endif
-au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
-
+call deoplete#custom#var('omni', 'input_patterns', {
+      \ 'tex': g:vimtex#re#deoplete
+      \})
 
 let g:go_disable_autoinstall = 0
 let g:go_highlight_types = 1
