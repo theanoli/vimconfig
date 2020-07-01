@@ -1,1 +1,3 @@
-VIM config
+VIM config!
+
+Remember to run `git submodule update --init` and, once in vim, `:helptags ALL`. 

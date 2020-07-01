@@ -39,6 +39,7 @@ endif
 call deoplete#custom#var('omni', 'input_patterns', {
       \ 'tex': g:vimtex#re#deoplete
       \})
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 let g:go_disable_autoinstall = 0
 let g:go_highlight_types = 1
