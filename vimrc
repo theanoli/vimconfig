@@ -11,9 +11,15 @@ set laststatus=2
 set mouse=a
 set tabstop=4
 set shiftwidth=4
-set spell
+set nospell
 
 colorscheme desert
+
+augroup spell
+	autocmd!
+	autocmd FileType text	set spell
+	autocmd FileType tex	set spell
+augroup END
 
 augroup pencil
   autocmd!
