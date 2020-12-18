@@ -19,11 +19,12 @@ augroup spell
 	autocmd!
 	autocmd FileType text	set spell
 	autocmd FileType tex	set spell
+	autocmd Filetype bib 	set nospell
 augroup END
 
 augroup pencil
   autocmd!
-  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType markdown,mkd call pencil#init({'wrap': 'soft'})
   autocmd FileType tex			call pencil#init({'wrap': 'soft'})
   autocmd FileType text         call pencil#init({'wrap': 'soft'})
 augroup END
@@ -32,6 +33,8 @@ autocmd FileType python nnoremap <buffer> <localleader>c I# <esc>
 autocmd FileType c nnoremap <buffer> <localleader>c I// <esc>
 autocmd FileType tex nnoremap <buffer> <localleader>c I% <esc>
 autocmd BufRead,BufNewFile * set conceallevel=0
+
+let g:pencil#autoformat = 0  
 
 let g:tex_flavor = 'latex'
 let g:vimtex_compiler_latexmk = {
