@@ -44,10 +44,14 @@ let g:vimtex_compiler_latexmk = {
 if has('nvim')
  let g:vimtex_compiler_progname = 'nvr'
 endif
+let g:vimtex_complete_bib = { 'simple': 1 }
+let g:vimtex_imaps_leader = '"'
 
-call deoplete#custom#var('omni', 'input_patterns', {
-      \ 'tex': g:vimtex#re#deoplete
-      \})
+" call deoplete#custom#var('omni', 'input_patterns', {
+"       \ 'tex': g:vimtex#re#deoplete
+"       \})
+
+" If the popup menu is visible, convert TAB to <C-n> else let TAB be TAB
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 let g:go_disable_autoinstall = 0
