@@ -15,6 +15,9 @@ set nospell
 
 colorscheme desert
 
+map <F1> <Esc>
+imap <F1> <Esc>
+
 augroup spell
 	autocmd!
 	autocmd FileType text	set spell

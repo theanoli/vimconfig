@@ -6,7 +6,7 @@ echo "source ~/.vim/vimrc" > ~/.vimrc
 cd ~/.vim; git submodule update --init
 
 sudo apt install neovim
-echo vim="nvim" >> ~/.bash_aliases; source ~/.bash_aliases
+echo "alias vim=\"nvim\"" >> ~/.bash_aliases; source ~/.bash_aliases
 
 mkdir ~/.config/nvim
 cd ~/.config/nvim
