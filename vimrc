@@ -14,7 +14,7 @@ set shiftwidth=4
 set nospell
 set clipboard+=unnamedplus
 
-colorscheme desert
+colorscheme pablo
 
 map <F1> <Esc>
 imap <F1> <Esc>
