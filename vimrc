@@ -13,6 +13,7 @@ set tabstop=4
 set shiftwidth=4
 set nospell
 set clipboard+=unnamedplus
+set wildmode=longest:full,full
 
 colorscheme pablo
 
