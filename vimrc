@@ -50,16 +50,9 @@ let g:pencil#autoformat = 0
 let g:tex_flavor = 'latex'
 let g:vimtex_compiler_latexmk = {
 			\ 'continuous' : 0,
-			\ 'options': [
-			\ 	'-bibtex',
-			\ 	'-min-crossrefs=20',
-			\ 	'-quiet',
-			\ 	]
+			\ 'build_dir' : 'build',
 			\}
 
-if has('nvim')
- let g:vimtex_compiler_progname = 'nvr'
-endif
 let g:vimtex_complete_bib = { 'simple': 1 }
 let g:vimtex_imaps_leader = '"'
 let g:vimtex_complete_recursive_bib = 1
