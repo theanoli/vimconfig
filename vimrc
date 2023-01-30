@@ -59,6 +59,7 @@ let g:vimtex_complete_bib = { 'simple': 1 }
 let g:vimtex_imaps_leader = '"'
 let g:vimtex_complete_recursive_bib = 1
 
+let g:vimtex_latexmk_options = '-bibtex -min-crossrefs=20'
 
 " If the popup menu is visible, convert TAB to <C-n> else let TAB be TAB
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
