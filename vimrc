@@ -34,6 +34,12 @@ augroup pencil
   autocmd FileType text         call pencil#init({'wrap': 'soft'})
 augroup END
 
+augroup VimCompletesMeTex
+autocmd!
+autocmd FileType tex
+	\ let b:vcm_omni_pattern = g:vimtex#re#neocomplete
+augroup END
+
 autocmd FileType python nnoremap <buffer> <localleader>c I# <esc>
 autocmd FileType c nnoremap <buffer> <localleader>c I// <esc>
 autocmd FileType tex nnoremap <buffer> <localleader>c I% <esc>
@@ -52,10 +58,6 @@ endif
 let g:vimtex_complete_bib = { 'simple': 1 }
 let g:vimtex_imaps_leader = '"'
 let g:vimtex_latexmk_options = '-bibtex -min-crossrefs=20'
-
-" call deoplete#custom#var('omni', 'input_patterns', {
-"       \ 'tex': g:vimtex#re#deoplete
-"       \})
 
 " If the popup menu is visible, convert TAB to <C-n> else let TAB be TAB
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"

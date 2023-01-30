@@ -13,4 +13,3 @@ cd ~/.config/nvim
 echo "set runtimepath^=~/.vim runtimepath+=~/.vim/after" > init.vim
 echo "let &packpath = &runtimepath" >> init.vim
 echo "source ~/.vimrc" >> init.vim
-
