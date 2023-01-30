@@ -51,6 +51,7 @@ if has('nvim')
 endif
 let g:vimtex_complete_bib = { 'simple': 1 }
 let g:vimtex_imaps_leader = '"'
+let g:vimtex_latexmk_options = '-bibtex -min-crossrefs=20'
 
 " call deoplete#custom#var('omni', 'input_patterns', {
 "       \ 'tex': g:vimtex#re#deoplete
