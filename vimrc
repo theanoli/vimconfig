@@ -22,8 +22,8 @@ imap <F1> <Esc>
 
 augroup spell
 	autocmd!
-	autocmd FileType text	set spell
-	autocmd FileType tex	set spell
+	autocmd FileType text	set nospell
+	autocmd FileType tex	set nospell
 	autocmd Filetype bib 	set nospell
 augroup END
 
@@ -57,6 +57,8 @@ if has('nvim')
 endif
 let g:vimtex_complete_bib = { 'simple': 1 }
 let g:vimtex_imaps_leader = '"'
+let g:vimtex_complete_recursive_bib = 1
+
 
 " If the popup menu is visible, convert TAB to <C-n> else let TAB be TAB
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
