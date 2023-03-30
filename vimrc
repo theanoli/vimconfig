@@ -34,12 +34,6 @@ augroup pencil
   autocmd FileType text         call pencil#init({'wrap': 'soft'})
 augroup END
 
-augroup VimCompletesMeTex
-autocmd!
-autocmd FileType tex
-	\ let b:vcm_omni_pattern = g:vimtex#re#neocomplete
-augroup END
-
 autocmd FileType python nnoremap <buffer> <localleader>c I# <esc>
 autocmd FileType c nnoremap <buffer> <localleader>c I// <esc>
 autocmd FileType tex nnoremap <buffer> <localleader>c I% <esc>

@@ -22,6 +22,3 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git@github.com:tpope/vim-surround.git
-[submodule "bundle/VimCompletesMe"]
-	path = bundle/VimCompletesMe
-	url = git@github.com:ackyshake/VimCompletesMe
