@@ -31,3 +31,6 @@
 [submodule "bundle/vim-misc"]
 	path = bundle/vim-misc
 	url = git@github.com:xolox/vim-misc
+[submodule "bundle/VimCompletesMe"]
+	path = bundle/VimCompletesMe
+	url = git@github.com:vim-scripts/VimCompletesMe

@@ -6,7 +6,10 @@ syntax enable
 set number
 set hidden
 set backspace=indent,eol,start
-set statusline="%f%m%r%h%w [%Y] [0x%02.2B]%< %F%=%4v,%4l %3p%% of %L"
+set statusline=%f%m%r%h%w
+set statusline+=\ [%Y]
+set statusline+=\ %=col\ %2v,\ line\ %2l\ of\ %L
+set statusline+=\ %=%3p%%
 set laststatus=2
 set mouse=a
 set tabstop=4
@@ -38,6 +41,8 @@ autocmd FileType python nnoremap <buffer> <localleader>c I# <esc>
 autocmd FileType c nnoremap <buffer> <localleader>c I// <esc>
 autocmd FileType tex nnoremap <buffer> <localleader>c I% <esc>
 autocmd BufRead,BufNewFile * set conceallevel=0
+
+let g:lsp_diagnostics_enabled = 0  " use ALE instead of LSP
 
 let g:pencil#autoformat = 0  
 
