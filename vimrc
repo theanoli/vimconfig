@@ -42,8 +42,6 @@ autocmd FileType c nnoremap <buffer> <localleader>c I// <esc>
 autocmd FileType tex nnoremap <buffer> <localleader>c I% <esc>
 autocmd BufRead,BufNewFile * set conceallevel=0
 
-let g:lsp_diagnostics_enabled = 0  " use ALE instead of LSP
-
 let g:pencil#autoformat = 0  
 
 let g:tex_flavor = 'latex'
