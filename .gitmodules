@@ -25,12 +25,15 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git@github.com:preservim/tagbar
-[submodule "bundle/vim-easytags"]
-	path = bundle/vim-easytags
-	url = git@github.com:xolox/vim-easytags
 [submodule "bundle/vim-misc"]
 	path = bundle/vim-misc
 	url = git@github.com:xolox/vim-misc
 [submodule "bundle/VimCompletesMe"]
 	path = bundle/VimCompletesMe
 	url = git@github.com:vim-scripts/VimCompletesMe
+[submodule "bundle/vim-gutentags"]
+	path = bundle/vim-gutentags
+	url = git@github.com:ludovicchabant/vim-gutentags
+[submodule "ctags"]
+	path = ctags
+	url = git@github.com:universal-ctags/ctags.git
