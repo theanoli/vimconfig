@@ -10,6 +10,7 @@ set statusline=%f%m%r%h%w
 set statusline+=\ [%Y]
 set statusline+=\ %=col\ %2v,\ line\ %2l\ of\ %L
 set statusline+=\ %=%3p%%
+set statusline+=\ %{gutentags#statusline()}
 set laststatus=2
 set mouse=a
 set tabstop=4
@@ -58,6 +59,9 @@ let g:vimtex_quickfix_enabled = 0
 " If the popup menu is visible, convert TAB to <C-n> else let TAB be TAB
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
+" Open tag location list in preview window
+nnoremap <C-]> <C-W>g}  
+
 let g:go_disable_autoinstall = 0
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
@@ -69,3 +73,4 @@ let g:go_highlight_structs = 1
 
 map <C-n> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
+
