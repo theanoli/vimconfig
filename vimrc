@@ -60,7 +60,7 @@ let g:vimtex_quickfix_enabled = 0
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Open tag location list in preview window
-nnoremap <C-]> <C-W>g}  
+nnoremap <C-]> <C-W>g]  
 
 let g:go_disable_autoinstall = 0
 let g:go_highlight_types = 1
