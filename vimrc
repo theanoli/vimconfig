@@ -58,9 +58,6 @@ let g:vimtex_quickfix_enabled = 0
 " If the popup menu is visible, convert TAB to <C-n> else let TAB be TAB
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
-" Open tag location list in preview window
-" nnoremap <C-]> <C-W>g]  
-
 let g:go_disable_autoinstall = 0
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
@@ -71,7 +68,6 @@ let g:go_highlight_build_constraints = 1
 let g:go_highlight_structs = 1
 
 map <C-n> :NERDTreeToggle<CR>
-nmap <F8> :TagbarToggle<CR>
 
 " =========
 " CoC stuff
@@ -92,4 +88,4 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Toggle inlays in function calls
-nmap <silent> <C-i> :CocCommand document.toggleInlayHint<CR>
+nmap <silent> <F1> :CocCommand document.toggleInlayHint<CR>
