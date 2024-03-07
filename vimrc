@@ -10,7 +10,6 @@ set statusline=%f%m%r%h%w
 set statusline+=\ [%Y]
 set statusline+=\ %=col\ %2v,\ line\ %2l\ of\ %L
 set statusline+=\ %=%3p%%
-set statusline+=\ %{gutentags#statusline()}
 set laststatus=2
 set mouse=a
 set tabstop=4
@@ -19,7 +18,7 @@ set nospell
 set clipboard+=unnamedplus
 set wildmode=longest:full,full
 
-colorscheme pablo
+colorscheme wildcharm
 
 map <F1> <Esc>
 imap <F1> <Esc>
@@ -60,7 +59,7 @@ let g:vimtex_quickfix_enabled = 0
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Open tag location list in preview window
-nnoremap <C-]> <C-W>g]  
+" nnoremap <C-]> <C-W>g]  
 
 let g:go_disable_autoinstall = 0
 let g:go_highlight_types = 1
@@ -74,3 +73,23 @@ let g:go_highlight_structs = 1
 map <C-n> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
+" =========
+" CoC stuff
+" =========
+set encoding=utf-8
+set nobackup
+set nowritebackup
+
+set updatetime=300
+
+set signcolumn=yes
+" Skipped a bunch of stuff here
+
+" GoTo code navigation
+nmap <silent> gd :call CocAction('jumpDefinition', 'split')<CR>
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Toggle inlays in function calls
+nmap <silent> <C-i> :CocCommand document.toggleInlayHint<CR>
