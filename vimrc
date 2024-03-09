@@ -37,7 +37,8 @@ augroup pencil
   autocmd FileType text         call pencil#init({'wrap': 'soft'})
 augroup END
 
-autocmd FileType python nnoremap <buffer> <localleader>c I# <esc>
+" localleader default is \
+autocmd FileType python nnoremap <buffer> <localleader>c I# <esc>  
 autocmd FileType c nnoremap <buffer> <localleader>c I// <esc>
 autocmd FileType tex nnoremap <buffer> <localleader>c I% <esc>
 autocmd BufRead,BufNewFile * set conceallevel=0
@@ -89,3 +90,18 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Toggle inlays in function calls
 nmap <silent> <F1> :CocCommand document.toggleInlayHint<CR>
+
+" Tab completion
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+  \ coc#pum#visible() ? "\<C-n>" :
+  \ CheckBackspace() ? "\<Tab>" :
+  \ coc#refresh()
+
+" === Following config normally would go into coc-settings.json
+" Don't suggest until more than 3 characters have been typed
+call coc#config('suggest.minTriggerInputLength', 3)
