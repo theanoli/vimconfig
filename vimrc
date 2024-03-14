@@ -70,15 +70,6 @@ let g:go_highlight_structs = 1
 
 map <C-n> :NERDTreeToggle<CR>
 
-" Auto-close brackets, etc. in insert mode. Escape with ctrl+v
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
-
 " =========
 " CoC stuff
 " =========
