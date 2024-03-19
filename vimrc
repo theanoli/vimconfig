@@ -20,6 +20,11 @@ set wildmode=longest:full,full
 
 colorscheme wildcharm
 
+autocmd Filetype tex colorscheme evening
+autocmd Filetype bib colorscheme evening
+autocmd Filetype text colorscheme evening
+
+
 map <F1> <Esc>
 imap <F1> <Esc>
 
